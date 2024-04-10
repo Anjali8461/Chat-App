@@ -9,7 +9,7 @@ const useGetConversations = () => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch("http://localhost:8001/api/users",{credentials: "include"});
+				const res = await fetch("https://chat-app-rr0g.onrender.com/api/users",{credentials: "include"});
 				const data = await res.json();
 				if (data.error) {
 					throw new Error(data.error);
